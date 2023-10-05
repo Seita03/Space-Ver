@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR.js 3D Model Example</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <a-scene embedded arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
+        <!-- ここに3Dモデルを表示するコードを追加 -->
+        <a-entity gltf-model="earth.glb" scale="1 1 1" position="-4 0 -12"></a-entity>
+        <a-entity position="-4 -1.2 -12">
+            <a-text value="The Earth" align="center"></a-text>
+        </a-entity>
+        <a-entity gltf-model="sun.glb" scale="5 5 5" position="5 0 -20"></a-entity>
+        <a-entity scale="5 5 5" position="5 -7 -20">
+            <a-text value="The Sun" align="center"></a-text>
+        </a-entity>
+    </a-scene>
+</body>
+</html>
